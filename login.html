@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="java.js"></script>
+	<style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0;padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: all .2s linear;
+        }
+        body{
+            background-image: url(/assets/pexels-jake-heinemann-2399254.jpg); 
+            background-size: cover;
+            /* background-color: darkblue; */
+        }
+		.wrapper
+		{
+			max-width: 800px;
+			margin: 100px auto 0;
+            font-size: 24px;
+            background-color: aqua;
+            padding: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	
+     <div class="wrapper">
+     	<form class="row g-3 needs-validation" action="Index.html" novalidate>
+                <h1 style="color: red;text-align: center;">Sign In</h1>
+				  <div class="col-md-12">
+				    <label for="validationCustom01" class="form-label">First name</label>
+				    <input type="text" class="form-control" id="validationCustom01" placeholder="Enter First Name" required oninput=" this.value = this.value.replace(/[0-9]/g,'')">
+				    <div class="valid-feedback">
+				      Looks good!
+				    </div>
+				  </div>
+				  <div class="col-md-12">
+				    <label for="validationCustom02" class="form-label">Last name</label>
+				    <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Last Name" required oninput=" this.value = this.value.replace(/[0-9]/g,'')">
+				    <div class="valid-feedback">
+				      Looks good!
+				    </div>
+				  </div>
+                  <div class="col-md-12">
+				    <label for="validationCustom03" class="form-label">Email</label>
+				    <input type="email" class="form-control" id="validationCustom03"  required placeholder="Enter Email">
+				    <div class="valid-feedback">
+				      Looks good!
+				    </div>
+				  </div>
+				  <div class="col-md-12">
+				    <label for="validationCustom04" class="form-label" >Password</label>
+				    <input type="password" class="form-control" id="validationCustom04" required maxlength="6" placeholder="Enter Password">
+
+				  </div>
+				  <div class="col-md-12">
+				    <div class="form-check">
+				      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+				      <label class="form-check-label" for="invalidCheck">
+				        Agree to terms and conditions
+				      </label>
+				      <div class="invalid-feedback">
+				        You must agree before submitting.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="col-12">
+				    <button class="btn btn-primary" type="submit" onsubmit="fun()">SIGN IN</button>
+				  </div>
+				</form>
+				     </div>
+
+
+	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>	
+	 <script>
+	 	// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(function () {
+			  'use strict'
+
+			  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+			  var forms = document.querySelectorAll('.needs-validation')
+
+			  // Loop over them and prevent submission
+			  Array.prototype.slice.call(forms)
+			    .forEach(function (form) {
+			      form.addEventListener('submit', function (event) {
+			        if (!form.checkValidity()) {
+			          event.preventDefault()
+			          event.stopPropagation()
+			        }
+					else{
+						alert("THANKS FOR SIGN-IN")
+					}
+			        form.classList.add('was-validated')
+			      }, false)
+			    })
+			})()
+
+	 </script>     
+</body>
+</html>
